@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bmarcono <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: bmarcono <bmarcono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/20 17:54:53 by bmarcono          #+#    #+#             */
-/*   Updated: 2023/03/20 19:12:25 by bmarcono         ###   ########.fr       */
+/*   Created: 2023/04/30 14:40:14 by bmarcono          #+#    #+#             */
+/*   Updated: 2023/04/30 14:40:22 by bmarcono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 #include <stddef.h>
 
 int	ft_strlen(char	*str)

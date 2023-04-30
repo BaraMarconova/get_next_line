@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bmarcono <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: bmarcono <bmarcono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 20:05:41 by bmarcono          #+#    #+#             */
-/*   Updated: 2023/04/26 19:42:57 by bmarcono         ###   ########.fr       */
+/*   Created: 2023/04/30 14:40:53 by bmarcono          #+#    #+#             */
+/*   Updated: 2023/04/30 14:40:59 by bmarcono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1

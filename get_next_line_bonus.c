@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line 2.c                                  :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bmarcono <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: bmarcono <bmarcono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/13 20:09:28 by bmarcono          #+#    #+#             */
-/*   Updated: 2023/03/22 19:57:43 by bmarcono         ###   ########.fr       */
+/*   Created: 2023/04/30 14:40:35 by bmarcono          #+#    #+#             */
+/*   Updated: 2023/04/30 14:40:42 by bmarcono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,21 +112,21 @@ char	*make_static_buffer(int fd, char *static_buffer)
 
 char	*get_next_line(int fd)
 {
-	static char		*static_buffer;
+	static char		*static_buffer[4096];
 	char			*line;
 	char			*temp;
 
 	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
 		return (NULL);
-	static_buffer = make_static_buffer(fd, static_buffer);
-	temp = static_buffer;
-	line = make_line(static_buffer);
+	static_buffer[fd] = make_static_buffer(fd, static_buffer[fd]);
+	temp = static_buffer[fd];
+	line = make_line(static_buffer[fd]);
 	if (!line)
 	{	
 		free(temp);
 		return (NULL);
 	}
-	static_buffer = new_static_buffer(static_buffer);
+	static_buffer[fd] = new_static_buffer(static_buffer[fd]);
 	free (temp);
 	return (line);
 }
