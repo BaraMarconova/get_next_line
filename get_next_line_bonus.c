@@ -6,7 +6,7 @@
 /*   By: bmarcono <bmarcono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 14:40:35 by bmarcono          #+#    #+#             */
-/*   Updated: 2023/04/30 14:40:42 by bmarcono         ###   ########.fr       */
+/*   Updated: 2023/05/03 18:59:00 by bmarcono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ char	*make_line(char *static_buffer)
 		line[i] = static_buffer[i];
 		i++;
 	}
-	if ((static_buffer[i] == '\n'))
+	if (static_buffer[i] == '\n')
 		line[i++] = '\n';
 	if (static_buffer[i] == '\0' && i == 0)
 	{
@@ -97,7 +97,7 @@ char	*make_static_buffer(int fd, char *static_buffer)
 		int_read = read(fd, buffer, BUFFER_SIZE);
 		if (int_read == -1)
 			return (NULL);
-		else if ((int_read == 0))
+		else if (int_read == 0)
 			break ;
 		buffer[int_read] = '\0';
 		tmp = static_buffer;

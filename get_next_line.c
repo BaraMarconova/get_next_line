@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line 2.c                                  :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bmarcono <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: bmarcono <bmarcono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 20:09:28 by bmarcono          #+#    #+#             */
-/*   Updated: 2023/03/22 19:57:43 by bmarcono         ###   ########.fr       */
+/*   Updated: 2023/05/03 18:52:07 by bmarcono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ char	*make_line(char *static_buffer)
 		line[i] = static_buffer[i];
 		i++;
 	}
-	if ((static_buffer[i] == '\n'))
+	if (static_buffer[i] == '\n')
 		line[i++] = '\n';
 	if (static_buffer[i] == '\0' && i == 0)
 	{
@@ -97,7 +97,7 @@ char	*make_static_buffer(int fd, char *static_buffer)
 		int_read = read(fd, buffer, BUFFER_SIZE);
 		if (int_read == -1)
 			return (NULL);
-		else if ((int_read == 0))
+		else if (int_read == 0)
 			break ;
 		buffer[int_read] = '\0';
 		tmp = static_buffer;
